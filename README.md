@@ -16,3 +16,4 @@
    * Im adding background music as the first interesting feature **Done**
    * Make a mistake counter. Also a scoreboard, and each correct move is a 50 amount of points. **Done** 
    this way the players will have track of which ones he got correct or incorrect without having to look to on the terminal. Making it more practical
+I also created some boards with different difficulties so that users can play depending how good they are

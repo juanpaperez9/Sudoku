@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 import java.util.Set;
-import java.util.Stack;
+import java.util.Stack; 
 
 public class Board {
     private int[][] board; // The Sudoku board represented as a 2D array.
@@ -76,10 +76,14 @@ public class Board {
     
     public Move undoLastMove() {
         if (!undoStack.isEmpty()) {
-            return undoStack.pop();
+            Move lastMove = undoStack.pop();
+            // Set the cell to its old value
+            board[lastMove.row][lastMove.col] = lastMove.oldValue;
+            return lastMove;
         }
         return null;
     }
+    
 
     public List<Move> getAllMoves() {
         return allMoves;
